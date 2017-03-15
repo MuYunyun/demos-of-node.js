@@ -10,13 +10,12 @@ function divSystemContentElement(message) { // 用来显示可信的文本
 function processUserInput(chatApp, socket) {
   let message = $('#send-message').val()
   let systemMessage
-
-  if (message.charAt(0) == '/') {  // 作为聊天命令？
+  if (message.charAt(0) == '/') {  // 作为聊天命令
     systemMessage = chatApp.processCommand(message)
     if (systemMessage) {
       $('#messages').append(divSystemContentElement(systemMessage))
     }
-  } else {  // 讲非命令输入广播给其他用户
+  } else {  // 将非命令输入广播给其他用户
     chatApp.sendMessage($('#room').text(), message)
     $('#messages').append(divEscapedContentElement(message))
     $('#messages').scrollTop($('#messages').prop('scrollHeight'))
@@ -48,12 +47,12 @@ $(document).ready(function() {
   })
 
   socket.on('message', (message) => {  // 显示接收到的消息
-    console.log('1111111'+$('<div></div>'))
     let newElement = $('<div></div>').text(message.text)
+    console.log(newElement)
     $('#messages').append(newElement)
   })
 
-  socket.on('rooms', function(rooms) {  // 可用房间列表
+  socket.on('rooms', (rooms) => {  // 可用房间列表
     $('#room-list').empty()
 
     for(let room in rooms) {

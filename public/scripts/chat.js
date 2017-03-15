@@ -3,7 +3,7 @@ const Chat = function(socket) {
 }
 
 // 发送聊天消息的函数
-Chat.prototype.sendMessage = (room, text) => {
+Chat.prototype.sendMessage = function(room, text) {
   const message = {
     room: room,
     text: text
@@ -12,16 +12,17 @@ Chat.prototype.sendMessage = (room, text) => {
 }
 
 // 变更房间的函数
-Chat.prototype.changeRoom = (room) => {
+Chat.prototype.changeRoom = function(room) {
+  console.log(room)
+  debugger
   this.socket.emit('join', {
     newRoom: room
   })
 }
 
 // 处理聊天命令
-Chat.prototype.processCommand = (commands) => {
+Chat.prototype.processCommand = function(commands) {
   let words = commands.split(' ')
-  console.log(words)
   let command = words[0]
                   .substring(1, words[0].length)
                   .toLowerCase()
@@ -30,7 +31,7 @@ Chat.prototype.processCommand = (commands) => {
   switch(command) {
     case 'join':
       words.shift()
-      let room = words.join(' ')
+      let room = words.join(' ')  // 数组转为字符串
       this.changeRoom(room)
       break
     case 'nick':
