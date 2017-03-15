@@ -48,17 +48,13 @@ $(document).ready(function() {
 
   socket.on('message', (message) => {  // 显示接收到的消息
     let newElement = $('<div></div>').text(message.text)
-    console.log(newElement)
     $('#messages').append(newElement)
   })
 
   socket.on('rooms', (rooms) => {  // 可用房间列表
     $('#room-list').empty()
-
     for(let room in rooms) {
-      console.log(room)
-      room = room.substring(1, room.length)
-      console.log(room)
+      // room = room.substring(1, room.length)
       if(room != '') {
         $('#room-list').append(divEscapedContentElement(room))
       }

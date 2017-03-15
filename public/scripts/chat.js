@@ -13,8 +13,6 @@ Chat.prototype.sendMessage = function(room, text) {
 
 // 变更房间的函数
 Chat.prototype.changeRoom = function(room) {
-  console.log(room)
-  debugger
   this.socket.emit('join', {
     newRoom: room
   })
