@@ -64,7 +64,7 @@ function getTemplate(titles, res) {
 }
 
 function formatHtml(titles, tmpl, res) {
-  console.log(titles)
+  // console.log(titles)
   const html = tmpl.replace('%', titles.join('</li><li>'))
   res.writeHead(200, {'Content-Type': 'text/html'})
   res.end(html)  // 将HTML页面发送给用户
