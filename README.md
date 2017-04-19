@@ -16,3 +16,9 @@ Some demos of Node
     * 效果：随机选择的RSS预定源中获取一篇文章的标题和URL
 * word_count (在一个简单的程序中实现并行化流程控制)
     * 效果：控制台中统计所有单词分别出现的总数
+
+the Second section
+* todoList
+* 基于的文件的存储
+    * 使用方法: node cli_tasks.js add Floss the cat.
+    * 使用方法: node cli_tasks.js list.
