@@ -1,4 +1,7 @@
-Some demos of Node
+这些 demoes 来自《Node.js实战》一书
+
+## demoes 使用说明
+### 第一部分
 * chatrooms (基于node.js构建的具有多个房间的聊天室)
     * socket.IO
     * 将消息和昵称/房间变更请求传给服务器
@@ -17,8 +20,11 @@ Some demos of Node
 * word_count (在一个简单的程序中实现并行化流程控制)
     * 效果：控制台中统计所有单词分别出现的总数
 
+### 第二部分
 the Second section
 * todoList
 * 基于的文件的存储
     * 使用方法: node cli_tasks.js add Floss the cat.
     * 使用方法: node cli_tasks.js list.
+* connect (中间件的使用)
+    * 使用方法: 测试 curl --user tobi:ferret http://localhost:3000/admin/users
