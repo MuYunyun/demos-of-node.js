@@ -1,4 +1,4 @@
-这些 demoes 来自《Node.js实战》一书
+这些 demoes 取材自《Node.js实战》、《深入浅出 Node.js》。
 
 ## demoes 使用说明
 ### 第一部分
@@ -28,3 +28,7 @@ the Second section
     * 使用方法: node cli_tasks.js list.
 * connect (中间件的使用)
     * 使用方法: 测试 curl --user tobi:ferret http://localhost:3000/admin/users
+
+### Other
+* promise(实现一个promise)
+    * 使用方法：node sequence（推荐用 node-inspector 打断点进行观察）
