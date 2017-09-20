@@ -1,5 +1,5 @@
 // 这段代码只是为了演示 Promise 的用法，运行在浏览器端
-08:00:00.000 function pms1() {
+function pms1() {
   return new Promise(function (resolve, reject) {
     console.log('执行任务1')
     resolve('执行任务1成功')
