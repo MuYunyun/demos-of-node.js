@@ -32,3 +32,5 @@ the Second section
 ### Other
 * promise(实现一个promise)
     * 使用方法：node sequence（推荐用 node-inspector 打断点进行观察）
+* generator(对 co 库的实现)
+    * 使用方法：node thunk（基于 Thunk 函数 + Generator的自动执行）
